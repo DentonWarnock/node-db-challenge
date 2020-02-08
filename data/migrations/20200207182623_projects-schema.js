@@ -41,7 +41,7 @@ exports.up = async function(knex) {
       .references("resources.id")
       .onDelete("CASCADE")
       .onUpdate("CASCADE");
-    tbl.primary(["project_id", "resource_id"]);
+    // tbl.primary(["project_id", "resource_id"]);
   });
 };
 
