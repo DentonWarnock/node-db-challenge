@@ -12,10 +12,27 @@ function getProjects() {
   return db("projects").select();
 }
 
+// function getProjectById(id) {
+//   return db("projects")
+//     .where({ id })
+//     .first();
+// }
+
 function getProjectById(id) {
-  return db("projects")
-    .where({ id })
-    .first();
+  return (
+    db("projects as p")
+      .join("tasks as t", "t.project_id", "p.id")
+      // .join("projects_resources as pr", "pr.resource_id", "p.id")
+      .where({ project_id: id })
+      .select(
+        "p.id",
+        "p.name as name",
+        "p.description as description",
+        "p.completed",
+        "t.*"
+        // "pr.*"
+      )
+  );
 }
 
 function getTasksById(project_id) {
