@@ -1,0 +1,32 @@
+{
+  "name": "db-challenge",
+  "version": "1.0.0",
+  "description": "DB sprint challenge, let's do it",
+  "main": "index.js",
+  "scripts": {
+    "server": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DentonWarnock/node-db-challenge.git"
+  },
+  "keywords": [
+    "knex",
+    "sqlite3",
+    "SQL"
+  ],
+  "author": "Denton Warnock",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DentonWarnock/node-db-challenge/issues"
+  },
+  "homepage": "https://github.com/DentonWarnock/node-db-challenge#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "helmet": "^3.21.2",
+    "knex": "^0.20.8",
+    "nodemon": "^2.0.2",
+    "sqlite3": "^4.1.1"
+  }
+}
